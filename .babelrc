@@ -3,7 +3,12 @@
         [
             "@babel/preset-env",
             {
-                "useBuiltIns": "entry"
+                // 只对使用的新功能做垫片
+                "useBuiltIns": "usage",
+                "corejs": { 
+                    "version": "3.8", 
+                    "proposals": true 
+                }
             }
         ]     
     ]
